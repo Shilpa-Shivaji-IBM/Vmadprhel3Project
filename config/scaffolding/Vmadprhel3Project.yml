@@ -20,6 +20,14 @@ services:
     version: 10.3.0.0.34
     wpmServer: https://packages.webmethods.io
     wpmRegistry: licensed
+- serviceName: project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:fromEdgeBrowser
+  packages:
+  - name: Vmadprhel3Project
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
 - serviceName: project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:oracle
   packages:
   - name: Vmadprhel3Project
@@ -37,6 +45,8 @@ configurationVariables:
   : "10"
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.dbType
   : ORACLE
+  ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.fromEdgeBrowser.connectionManagerSettings.startupBackoffSecs
+  : "10"
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.password
   : "{AES}aLZqGGNedYRdf0xY47LtDQ=="
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_6.connectionSettings.networkProtocol
@@ -44,6 +54,8 @@ configurationVariables:
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_6.connectionSettings.user
   : JDBC_BVT
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.oracle.connectionSettings.password
+  : "{AES}gOk3wygfWVjWqDc4SLehnQ=="
+  ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.fromEdgeBrowser.connectionSettings.password
   : "{AES}gOk3wygfWVjWqDc4SLehnQ=="
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_4.connectionManagerSettings.expireTimeout
   : "1000"
@@ -59,6 +71,8 @@ configurationVariables:
   : loginTimeout=60;
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.oracle.connectionSettings.portNumber
   : "1521"
+  ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.fromEdgeBrowser.connectionSettings.serverName
+  : adapter-postgresql-15-7-on-amazonrds.cdmjexwbzoym.us-east-1.rds.amazonaws.com
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.serverName
   : sss
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.user
@@ -67,6 +81,8 @@ configurationVariables:
   : LOCAL_TRANSACTION
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_3.connectionSettings.otherProperties
   : loginTimeout=60;
+  ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.fromEdgeBrowser.connectionSettings.trustStore
+  : ""
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.databaseName
   : ""
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.datasourceClass
@@ -77,6 +93,8 @@ configurationVariables:
   : "1000"
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.otherProperties
   : loginTimeout=60;
+  ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.fromEdgeBrowser.connectionManagerSettings.poolable
+  : "false"
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.oracle.connectionManagerSettings.poolable
   : "false"
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_4.connectionSettings.dbType
@@ -89,10 +107,14 @@ configurationVariables:
   : NO_TRANSACTION
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_3.connectionSettings.networkProtocol
   : ""
+  ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.fromEdgeBrowser.connectionManagerSettings.startupRetryCount
+  : "0"
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_3.connectionSettings.trustStore
   : ""
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_3.connectionSettings.datasourceClass
   : com.wm.dd.jdbcx.oracle.OracleDataSource
+  ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.fromEdgeBrowser.connectionManagerSettings.expireTimeout
+  : "1000"
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_3.connectionSettings.serverName
   : sds
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionEnabled
@@ -121,6 +143,8 @@ configurationVariables:
   : Progress® DataDirect®
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.dbType
   : ORACLE
+  ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.fromEdgeBrowser.connectionSettings.otherProperties
+  : driverType=thin;
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_4.connectionSettings.user
   : aaa
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.keyStore
@@ -132,6 +156,8 @@ configurationVariables:
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_4.connectionSettings.networkProtocol
   : ""
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.startupRetryCount
+  : "0"
+  ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.fromEdgeBrowser.connectionManagerSettings.heartBeatInterval
   : "0"
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_6.connectionSettings.otherProperties
   : driverType=thin;
@@ -169,10 +195,10 @@ configurationVariables:
   : "10"
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.oracle.connectionManagerSettings.minimumPoolSize
   : "1"
-  ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_3.connectionManagerSettings.poolIncrementSize
-  : "1"
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_3.connectionManagerSettings.startupRetryCount
   : "0"
+  ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_3.connectionManagerSettings.poolIncrementSize
+  : "1"
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.oracle.connectionSettings.driverType
   : Progress® DataDirect®
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_4.connectionManagerSettings.minimumPoolSize
@@ -201,6 +227,8 @@ configurationVariables:
   : driverType=thin;
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_3.connectionManagerSettings.blockingTimeout
   : "1000"
+  ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.fromEdgeBrowser.connectionSettings.databaseName
+  : ORCL
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_3.connectionSettings.portNumber
   : "1521"
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_6.connectionSettings.password
@@ -229,10 +257,14 @@ configurationVariables:
   : "0"
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.expireTimeout
   : "1000"
+  ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.fromEdgeBrowser.connectionSettings.transactionType
+  : LOCAL_TRANSACTION
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.oracle.connectionManagerSettings.maximumPoolSize
   : "10"
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_4.connectionManagerSettings.startupRetryCount
   : "0"
+  ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.fromEdgeBrowser.connectionSettings.user
+  : JDBC_BVT
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_6.connectionSettings.dbType
   : ORACLE
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_4.connectionEnabled
@@ -241,6 +273,10 @@ configurationVariables:
   : ORCL
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.serverName
   : ss
+  ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.fromEdgeBrowser.connectionSettings.driverType
+  : Progress® DataDirect®
+  ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.fromEdgeBrowser.connectionSettings.networkProtocol
+  : tcp
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.maximumPoolSize
   : "10"
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.networkProtocol
@@ -249,16 +285,22 @@ configurationVariables:
   : NO_TRANSACTION
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_6.connectionSettings.serverName
   : adapter-postgresql-15-7-on-amazonrds.cdmjexwbzoym.us-east-1.rds.amazonaws.com
+  ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.fromEdgeBrowser.connectionEnabled
+  : "false"
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_3.connectionSettings.user
   : ssss
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_3.connectionEnabled
   : "false"
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_6.connectionSettings.datasourceClass
   : com.wm.dd.jdbcx.oracle.OracleDataSource
+  ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.fromEdgeBrowser.connectionManagerSettings.poolIncrementSize
+  : "1"
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.oracle.connectionSettings.networkProtocol
   : tcp
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_3.connectionManagerSettings.maximumPoolSize
   : "10"
+  ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.fromEdgeBrowser.connectionSettings.portNumber
+  : "1521"
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.driverType
   : Progress® DataDirect®
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.transactionType
@@ -271,6 +313,8 @@ configurationVariables:
   : "1521"
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_6.connectionSettings.driverType
   : Progress® DataDirect®
+  ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.fromEdgeBrowser.connectionManagerSettings.blockingTimeout
+  : "1000"
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.oracle.connectionManagerSettings.blockingTimeout
   : "1000"
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.oracle.connectionSettings.trustStore
@@ -279,6 +323,10 @@ configurationVariables:
   : "1521"
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.heartBeatInterval
   : "0"
+  ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.fromEdgeBrowser.connectionManagerSettings.maximumPoolSize
+  : "10"
+  ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.fromEdgeBrowser.connectionSettings.keyStore
+  : ""
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_6.connectionManagerSettings.blockingTimeout
   : "1000"
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_6.connectionSettings.portNumber
@@ -287,6 +335,8 @@ configurationVariables:
   : "false"
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_3.connectionSettings.driverType
   : Progress® DataDirect®
+  ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.fromEdgeBrowser.connectionSettings.dbType
+  : ORACLE
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.oracle.connectionSettings.datasourceClass
   : com.wm.dd.jdbcx.oracle.OracleDataSource
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_3.connectionManagerSettings.poolable
@@ -297,8 +347,12 @@ configurationVariables:
   : ""
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.oracle.connectionSettings.keyStore
   : ""
+  ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.fromEdgeBrowser.connectionSettings.datasourceClass
+  : com.wm.dd.jdbcx.oracle.OracleDataSource
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.otherProperties
   : loginTimeout=60;
+  ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.fromEdgeBrowser.connectionManagerSettings.minimumPoolSize
+  : "1"
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_4.connectionSettings.serverName
   : aaaa
   ? artConnection.Vmadprhel3Project.project.vmadprhel3.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_3.connectionManagerSettings.expireTimeout
